@@ -1,22 +1,20 @@
 ---
-title: YOUR-PRODUCT-NAME (Beta)
+title: Bitdefender Endpoint Security Tools for PCF
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-**If this product is in beta, keep and edit the warning note below.**
 <p class="note warning">
 <strong>Warning: </strong>
-The PRODUCT-NAME for PCF tile is currently in beta and is intended for evaluation and test purposes only. 
+The Bitdefender Endpoint Security Tools for PCF tile is currently in beta and is intended for evaluation and test purposes only. 
 Do not use this product in a PCF production environment.
 </p>
 
-**This topic begins with a brief description of what the product tile (e.g. Apigee Edge Service Broker for PCF) does, 
-whereas the Overview section below describes what the service itself (e.g. Apigee Edge) does. See below for an example.**
 
-This documentation describes the Apigee Edge Service Broker for Pivotal Cloud Foundry (PCF). The Apigee Edge Service 
-Broker for PCF enables developers to manage APIs for their PCF apps through the Apigee Edge management console.
+This topic describes the Bitdefender Endpoint Security Tools for PCF tile.
+
+Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security agents to the virtual machines managed from your Pivotal Cloud Foundry (PCF) deployment.
 
 **Note**: This description will appear under **OVERVIEW** in the tile's listing on 
 [Pivotal Network](http://network.pivotal.io).
@@ -51,12 +49,13 @@ YOUR-PRODUCT-NAME includes the following key features:
 * Feature one
 * Feature two
 * Feature three
+* Feature four
 
 
 
-## <a id="snapshot"></a>Product Snapshot
+## <a id='snapshot'></a>Product Snapshot
 
-The following table provides version and version-support information about PRODUCT-NAME.
+The following table provides version and version-support information about Bitdefender Endpoint Security Tools for Pivotal Cloud Foundry (PCF).
 
 <table class="nice">
     <th>Element</th>
@@ -67,7 +66,7 @@ The following table provides version and version-support information about PRODU
     </tr>
     <tr>
         <td>Release date</td>
-        <td>YOUR-RELEASE-DATE (Ex: July 1, 2019)</td>
+        <td>April 19, 2019</td>
     </tr>
     <tr>
         <td>Software component version</td>
@@ -75,7 +74,7 @@ The following table provides version and version-support information about PRODU
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>YOUR-COMPATIBLE-OPS-MAN-VERSION (Ex. 2.2, 2.3, and 2.4)</td>
+        <td>2.3 and later</td>
     </tr>
     <tr>
         <td>Compatible Pivotal Application Service version(s)</td>
@@ -83,7 +82,7 @@ The following table provides version and version-support information about PRODU
     </tr>
     <tr>
        <td>BOSH stemcell version</td>
-       <td>Ubuntu Xenial</td>
+       <td>Ubuntu Xenial, CentOS 7, Windows Server 2012 R2, Windows Server 2016 Core</td>
     </tr>
     <tr>
         <td>IaaS support</td>
@@ -96,27 +95,67 @@ The following table provides version and version-support information about PRODU
 </table>
 
 
-## <a id="reqs"></a>Requirements
+## <a id='reqs'></a>Requirements
 
-**Provide any general or specific requirements, prerequisites, or dependencies here. 
-A general requirement might be something like, "An AppDynamics account." 
-A specific requirement might be something like, "Packaging Dependencies for Offline Buildpacks."**
+To install Bitdefender Endpoint Security Tools for PCF, the following system requirements must be met:
 
-YOUR-PRODUCT-NAME has the following requirements:
++ CPU:
 
-+ PREREQUISITE-1
+    - Minimum: Intel® Pentium compatible processors, 2.4 GHz.
+    - Recommended: Intel® Xeon multi-core CPU, 1.86 GHz or faster.
 
-+ PREREQUISITE-2
++ Free RAM Memory: 1 GB
 
-## <a id="limitations"></a>Limitations
++ Free Disk Space: 1 GB
+
+**Note:** Actual RAM and disk usage after installation is lower.
+
+
+
+## <a id='prereq'></a>Prerequisites
+
+
+Bitdefender Endpoint Security Tools for Pivotal Cloud Foundry (PCF) has the following requirements and prerequisites:
+
++ A PCF operator with admin rights.
+
++ Bitdefender Endpoint Security Tools for PCF (‘BEST for PCF) requires your usage of a Bitdefender GravityZone product. Please note that by downloading the BEST for PCF you acknowledge and agree that the sole purpose of this BEST for PCF is to [X], which further implies you acquiring a Bitdefender GravityZone product, which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions.  You can request a trial license here or by emailing Bitdefender Enterprise Sales.  
+You can request a trial license [here](https://www.bitdefender.com/business/free-trials/) or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
+
++ A Bitdefender Endpoint Security Tools installation package configured in the GravityZone console for deployment in the PCF environment.
+
++ To optimize network traffic, install Bitdefender Endpoint Security Tools with Relay role in your IaaS to have a local distribution mirror for installation files and updates. For more information, please refer to your GravityZone Administrator's Guide.
+
++ To use Central Scan, you must first deploy a Security Server in your IaaS. Bitdefender Central Scan engine offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. For more information, please refer to your GravityZone Admin Guide.
+
++ To use on-access scanning on Linux, Fanotify kernel option must be enabled. For more information, please refer to [Fanotify man pages](http://man7.org/linux/man-pages/man7/fanotify.7.html).
+
++ Make sure the protected virtual machines have connectivity to your GravityZone environment and Bitdefender Cloud services. To ensure Internet connectivity on protected virtual machines, you can use the `public_ip` VM extension.
+For details, refer to these knownledge base articles:
+    - [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
+    - [Connectivity requirements for Bitdefender GravityZone on-premises deployments](https://www.bitdefender.com/support/gravityzone-communication-ports-1132.html)
+
++ Make sure the protected virtual machines meet the Bitdefender Endpoint Security Tools system requirements specified hereinafter.
+
+
+## <a id='limitations'></a>Limitations
 
 **List any known limitations.**
 
-## <a id="feedback"></a>Feedback
+
+
+## <a id='feedback'></a>Feedback
 
 If you have a feature request, questions, or information about a bug, please email
-[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to YOUR-SUPPORT-EMAIL.
+[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to [Bitdefender Enterprise Sales](mailto:cf-feedback@pivotal.io).
 
 ## <a id='license'></a>License
 
-**List any license information here.**
+Text?
+
+
+
+
+
+
+
