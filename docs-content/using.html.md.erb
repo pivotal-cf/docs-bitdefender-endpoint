@@ -5,15 +5,17 @@ owner: Partners
 
 <strong><%= modified_date %></strong>
 
-This topic describes how to manage protection on virtual machines with Bitdefender Endpoint Security Tools for PCF, from the GravityZone Control Center console.
-
-Once deployed on the virtual machines from your PCF deployment, Bitdefender Endpoint Security Tools for PCF automatically syncs with the GravityZone Control Center
-console to receive configuration policies and tasks and to send status or security events. For detailed information on these topics, refer to your GravityZone Administrator's Guide.
+This topic provides best practices on using the GravityZone console for managing and monitoring Bitdefender protection installed on the virtual machines from your
+PCF deployment. For detailed information, refer to your GravityZone Administrator's Guide.
 
 ##<a id='check'></a>Check Protected Machines
 
+Once deployed on the virtual machines from your PCF deployment, Bitdefender Endpoint Security Tools automatically syncs with the GravityZone console to receive configuration policies and tasks and to send status or security events.
+
 Protected virtual machines from your PCF deployment will show up in the GravityZone Network inventory. Depending on your IaaS and inventory integrations configured in GravityZone, the virtual machines will show up in GravityZone under your IaaS infrastructure, Active Directory inventory or Custom Groups (in the custom
 folder configured in the package settings).
+
+![GravityZone console](gravityzone-console.png)
 
 Click a virtual machine in the Network inventory to see if protection is installed and check protection details.
 
@@ -21,7 +23,7 @@ Click a virtual machine in the Network inventory to see if protection is install
 
 Protected virtual machines are assigned a default policy, but you may want to create a dedicated policy for your PCF deployment to configure or customize specific settings, such as:
 
-* Security Servers to connect to, in case Bitdefender Endpoint Security Tools for PCF is configured to use the Central Scan engine.
+* Security Servers to connect to, in case Bitdefender Endpoint Security Tools is configured to use the Central Scan engine.
 
 * Local Relay endpoint to connect to, for optimized update traffic.
 
@@ -35,15 +37,6 @@ Assign the policy to the folders where the virtual machines from your PCF deploy
 
 To monitor protection, you can check the activity reports in GravityZone or configure notifications to be sent for specific status or security events via email or syslog.
 
-##<a id='troubleshoot'></a>Troubleshoot Bitdefender Endpoint Security Tools for PCF
 
-###<a id='troubleshoot.install'></a>Failed Installations
 
-Following the installation of Bitdefender Endpoint Security Tools for PCF tile, PCF deployments will fail if the Bitdefender Endpoint Security Tools installation on eligible virtual machines fails.
 
-**This topic should include any instructions for how to use the service or dashboard created by the tile. 
-Give procedures for how to perform the different functions offered by your product and provide screenshots where necessary.** 
-
-**You can also use this section to include information about Architecture and Troubleshooting for known errors. 
-If you include a Troubleshooting section, follow the Symptom/Explanation format used in the 
-[Okta Troubleshooting](http://docs.pivotal.io/p-identity/okta/troubleshooting.html) topic**.

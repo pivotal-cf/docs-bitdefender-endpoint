@@ -1,173 +1,131 @@
 ---
-<<<<<<< HEAD
 title: Bitdefender Endpoint Security Tools for PCF
-=======
-title: YOUR-PRODUCT-NAME (Beta)
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-<<<<<<< HEAD
-<p class="note warning">
-<strong>Warning: </strong>
-The Bitdefender Endpoint Security Tools for PCF tile is currently in beta and is intended for evaluation and test purposes only. 
-Do not use this product in a PCF production environment.
-</p>
+This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivotal® Cloud Foundry (PCF) tile.
 
-
-This topic describes the Bitdefender Endpoint Security Tools for PCF tile.
-
-Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security agents to the virtual machines managed from your Pivotal Cloud Foundry (PCF) deployment.
-=======
-**If this product is in beta, keep and edit the warning note below.**
-<p class="note warning">
-<strong>Warning: </strong>
-The PRODUCT-NAME for PCF tile is currently in beta and is intended for evaluation and test purposes only. 
-Do not use this product in a PCF production environment.
-</p>
-
-**This topic begins with a brief description of what the product tile (e.g. Apigee Edge Service Broker for PCF) does, 
-whereas the Overview section below describes what the service itself (e.g. Apigee Edge) does. See below for an example.**
-
-This documentation describes the Apigee Edge Service Broker for Pivotal Cloud Foundry (PCF). The Apigee Edge Service 
-Broker for PCF enables developers to manage APIs for their PCF apps through the Apigee Edge management console.
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
-
-**Note**: This description will appear under **OVERVIEW** in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io).
 
 ## <a id='overview'></a>Overview
 
-**The overview describes the service that your product offers to PCF developers. 
-Make sure to overview the features of the integration.
-Don't focus only on the overview of your product that is being integrated.
-See below for an example.**
+Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security agents to the virtual machines managed from your PCF deployment.
 
-The Apigee Edge Service Broker for PCF registers a service broker with PCF and exposes its service plans on the 
-Marketplace. Developers can then create service plan instances using Apps Manager or the Cloud Foundry Command 
-Line Interface (cf CLI) and bind them to their apps.
+For Pivotal Cloud Foundry customers wanting to fulfill the compliance mandate without slowing down infrastructure-service provisioning and application delivery, Bitdefender Endpoint Security Tools for PCF provides an automated way to incorporate award-winning endpoint security into BOSH-built virtual machine (VM) instances upon their creation. With VMs born secured, customers can achieve the following:
 
-Creating an Apigee Edge for PCF service instance and binding it to an app creates an Apigee Edge API proxy that 
-handles requests for the app. This lets developers use the Apigee Edge management console to manage API request 
-handling between clients and the app.
++ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender, a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® Outstanding Security Product Award winner.
 
-**Note**: This overview will appear under **OVERVIEW**, combined with the description above in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io).
++ Streamline compliance with PCI DSS, HIPAA, Gramm-Leach-Bliley Act (GLBA), GDPR, and other regulatory standards calling for an antimalware solution.
+
++ Eliminate the time and effort required to manually deploy the agent and apply security policies after the fact.
+
 
 ## <a id='features'></a>Key Features
 
-**Note**: This feature list will appear under **FEATURES** in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io). 
-Make sure you list the key features of the tile (the integration). 
-We cannot accept a list of the key features of your product that we are integrating.
+**Management**
 
-YOUR-PRODUCT-NAME includes the following key features:
++ Automatic deployment of Bitdefender Endpoint Security Tools by BOSH at the time of VM instantiation. 
 
-* Feature one
-* Feature two
-* Feature three
-<<<<<<< HEAD
-* Feature four
++ Single-console, single-pane-of-glass security management and consistent policy enforcement across heterogeneous datacenter and cloud infrastructure.
 
++ Automatic application of security policies at scale and security-license recovery from decommissioned VMs in VMware® vSphere, AWS EC2 and Microsoft Azure environments.
+
++ Compatibility with Splunk and other SIEM platforms (via Syslog) for security-event analysis. 
+
+**Security**
+
+Layered next-generation endpoint security delivering, among others, the following advanced capabilities:
+
++ Dynamic Machine Learning (Local and Cloud-Based)
+
+Leverages proprietary models trained in URL filtering and file analysis on 500M endpoint-sensors and trillions of samples to maximize efficacy and minimize false positives. 
+
++ HyperDetect Tunable Machine Learning
+
+Allows administrators to adjust threat-detection aggressiveness levels to suit the context and risk profile of their organization to detect high-probability, high-impact attacks while minimizing false positives on lower-risk threats.
+
++ Process Inspector
+
+Continuously monitors and scores running processes and system events and tags suspicious activities to provide proactive, dynamic detection and remediation of unknown threats.
+
++ Anti-Exploit
+
+Detects exploitation methods and protects the memory space of browsers, document viewers, media players, and office applications.
+
++ Sandbox Analyzer
+
+Automatically submits suspicious files from VMs to a cloud- or on-premises-based network sandbox for detonation and behavioral analysis.
+
++ Application Control
+
+Provides both whitelisting (“default deny”) and blacklisting capabilities to restrict the range of applications allowed to run in a VM.
+
++ Integrated Patch Management Add-On
+
+Provides automatic discovery and characterization of vulnerabilities and the widest range of patches for OSs, applications and golden images.
 
 
 ## <a id='snapshot'></a>Product Snapshot
 
 The following table provides version and version-support information about Bitdefender Endpoint Security Tools for Pivotal Cloud Foundry (PCF).
-=======
-
-
-
-## <a id="snapshot"></a>Product Snapshot
-
-The following table provides version and version-support information about PRODUCT-NAME.
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
 
 <table class="nice">
     <th>Element</th>
     <th>Details</th>
     <tr>
         <td>Tile version</td>
-        <td>vYOUR-VERSION-NUMBER</td>
+        <td>v1.0.29</td>
     </tr>
     <tr>
         <td>Release date</td>
-<<<<<<< HEAD
         <td>April 19, 2019</td>
-=======
-        <td>YOUR-RELEASE-DATE (Ex: July 1, 2019)</td>
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
     </tr>
     <tr>
-        <td>Software component version</td>
-        <td>YOUR-SOFTWARE-COMPONENT-VERSION-NUMBER</td>
+        <td>Bitdefender agent version</td>
+        <td>Latest version available in the GravityZone console</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-<<<<<<< HEAD
         <td>2.3 and later</td>
-=======
-        <td>YOUR-COMPATIBLE-OPS-MAN-VERSION (Ex. 2.2, 2.3, and 2.4)</td>
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
-    </tr>
-    <tr>
-        <td>Compatible Pivotal Application Service version(s)</td>
-        <td>YOUR-COMPATIBLE-PIVOTAL-APPLICATION-SERVICE-VERSION (Ex. 2.2, 2.3, and 2.4)</td>
+
     </tr>
     <tr>
        <td>BOSH stemcell version</td>
-<<<<<<< HEAD
-       <td>Ubuntu Xenial, CentOS 7, Windows Server 2012 R2, Windows Server 2016 Core</td>
-=======
-       <td>Ubuntu Xenial</td>
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
+       <td>Ubuntu Xenial, CentOS 7, Windows Server 2012 R2, Windows Server 2016</td>
     </tr>
     <tr>
         <td>IaaS support</td>
-        <td>AWS?, Azure?, GCP?, OpenStack?, and vSphere?</td>
+        <td>All platforms</td>
     </tr>
     <tr>
-        <td>IPsec support?</td>
-        <td>[Yes or No]</td>
+        <td>IPsec support</td>
+        <td>Yes</td>
     </tr>
 </table>
 
 
-<<<<<<< HEAD
 ## <a id='reqs'></a>Requirements
 
-To install Bitdefender Endpoint Security Tools for PCF, the following system requirements must be met:
+Bitdefender Endpoint Security Tools for PCF requires your usage of a Bitdefender GravityZone product. 
 
-+ CPU:
+Please note that by downloading the Bitdefender Endpoint Security Tools for PCF you acknowledge and agree that the sole purpose of this product is to protect PCF deployments, which further implies you acquiring a Bitdefender GravityZone product, which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions. 
 
-    - Minimum: Intel® Pentium compatible processors, 2.4 GHz.
-    - Recommended: Intel® Xeon multi-core CPU, 1.86 GHz or faster.
-
-+ Free RAM Memory: 1 GB
-
-+ Free Disk Space: 1 GB
-
-**Note:** Actual RAM and disk usage after installation is lower.
-
+You can request a trial license [here](https://www.bitdefender.com/business/free-trials/) or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
 
 
 ## <a id='prereq'></a>Prerequisites
 
 
-Bitdefender Endpoint Security Tools for Pivotal Cloud Foundry (PCF) has the following requirements and prerequisites:
+Bitdefender Endpoint Security Tools for PCF has the following requirements and prerequisites:
 
-+ A PCF operator with admin rights.
-
-+ Bitdefender Endpoint Security Tools for PCF (‘BEST for PCF) requires your usage of a Bitdefender GravityZone product. Please note that by downloading the BEST for PCF you acknowledge and agree that the sole purpose of this BEST for PCF is to [X], which further implies you acquiring a Bitdefender GravityZone product, which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions.  You can request a trial license here or by emailing Bitdefender Enterprise Sales.  
-You can request a trial license [here](https://www.bitdefender.com/business/free-trials/) or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
++ A PCF operator with administrative rights.
 
 + A Bitdefender Endpoint Security Tools installation package configured in the GravityZone console for deployment in the PCF environment.
 
 + To optimize network traffic, install Bitdefender Endpoint Security Tools with Relay role in your IaaS to have a local distribution mirror for installation files and updates. For more information, please refer to your GravityZone Administrator's Guide.
 
-+ To use Central Scan, you must first deploy a Security Server in your IaaS. Bitdefender Central Scan engine offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. For more information, please refer to your GravityZone Admin Guide.
++ To use Central Scan, you first must deploy a Security Server in your IaaS. Bitdefender Central Scan engine offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. For more information, please refer to your GravityZone Administrator's Guide.
 
 + To use on-access scanning on Linux, Fanotify kernel option must be enabled. For more information, please refer to [Fanotify man pages](http://man7.org/linux/man-pages/man7/fanotify.7.html).
 
@@ -176,23 +134,26 @@ For details, refer to these knownledge base articles:
     - [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
     - [Connectivity requirements for Bitdefender GravityZone on-premises deployments](https://www.bitdefender.com/support/gravityzone-communication-ports-1132.html)
 
-+ Make sure the protected virtual machines meet the Bitdefender Endpoint Security Tools system requirements specified hereinafter.
++ Make sure the protected virtual machines meet the Bitdefender Endpoint Security Tools system requirements:
 
+    + CPU:
 
-## <a id='limitations'></a>Limitations
+        - Minimum: Intel® Pentium compatible processors, 2.4 GHz.
+        - Recommended: Intel® Xeon multi-core CPU, 1.86 GHz or faster.
 
-**List any known limitations.**
+    + Free RAM Memory: 1 GB
 
+    + Free Disk Space: 1 GB
+
+    <p class="note important">
+    <strong>Note: </strong>
+    Actual RAM and disk usage after installation is lower.
+    </p>
 
 
 ## <a id='feedback'></a>Feedback
 
-If you have a feature request, questions, or information about a bug, please email
-[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to [Bitdefender Enterprise Sales](mailto:cf-feedback@pivotal.io).
-
-## <a id='license'></a>License
-
-Text?
+If you have a feature request, questions, or information about a bug, please email [Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or contact [Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).
 
 
 
@@ -200,29 +161,5 @@ Text?
 
 
 
-=======
-## <a id="reqs"></a>Requirements
 
-**Provide any general or specific requirements, prerequisites, or dependencies here. 
-A general requirement might be something like, "An AppDynamics account." 
-A specific requirement might be something like, "Packaging Dependencies for Offline Buildpacks."**
 
-YOUR-PRODUCT-NAME has the following requirements:
-
-+ PREREQUISITE-1
-
-+ PREREQUISITE-2
-
-## <a id="limitations"></a>Limitations
-
-**List any known limitations.**
-
-## <a id="feedback"></a>Feedback
-
-If you have a feature request, questions, or information about a bug, please email
-[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to YOUR-SUPPORT-EMAIL.
-
-## <a id='license'></a>License
-
-**List any license information here.**
->>>>>>> a3f60b4043627d374bfa34685b259c5b0894c0bc
