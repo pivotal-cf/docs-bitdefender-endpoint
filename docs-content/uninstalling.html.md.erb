@@ -1,0 +1,29 @@
+---
+title: Uninstalling Bitdefender Endpoint Security Tools for PCF
+owner: Partners
+---
+
+<strong><%= modified_date %></strong>
+
+This topic describes how to uninstall Bitdefender Endpoint Security Tools for PCF from your PCF deployment.
+
+1. From the Ops Manager Installation Dashboard, click the trash icon on Bitdefender Endpoint Security Tools for PCF tile. 
+
+2. Click **Confirm** in the Delete Product window.
+
+3. Click **Review Pending Changes**, then **Apply Changes**.
+
+The tile is removed from the Installation Dashboard and the BOSH Runtime Config. However, the tile still appears in the Available Products view.
+
+<p class="note important">
+    <strong>Important: </strong>
+Please remember you must redeploy in order to actually remove the Bitdefender Endpoint Security Tools agents from the virtual machines. 
+</p>
+
+<p class="note warning">
+    <strong>Warning: </strong>
+Do not run the <strong>Uninstall Client</strong> task from the GravityZone console on virtual machines from your PCF deployment.
+
+If you try to uninstall the Linux agent from the GravityZone console, the target machines will appear as failing, because the PCF monitor will see that the Bitdefender watchdog process is not running (because it will not exist anymore).
+</p>
+
