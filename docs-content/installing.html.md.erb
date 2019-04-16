@@ -27,10 +27,8 @@ Here are the best practices to create and configure an installation package in G
 4. Enter a suggestive name and description for the installation package you want to create. For example, **BEST for PCF**.
 
 5. Select the protection modules you want to install:
-
-    a. For Linux deployments, only the Antimalware module is available.
-    
-    b. For Windows server deployments, you can install additional protection modules beside Antimalware, including Advanced Threat Control, Application Control, and Patch Management (if available with your GravityZone license).
+    * For Linux deployments, only the Antimalware module is available.
+    * For Windows server deployments, you can install additional protection modules beside Antimalware, including Advanced Threat Control, Application Control, and Patch Management (if available with your GravityZone license).
 
     <p class="note important">
     <strong>Important: </strong>
@@ -38,12 +36,9 @@ Here are the best practices to create and configure an installation package in G
     </p>
 
 6. Configure **Scan Mode**. Bitdefender Endpoint Security Tools provides three types of engines:
-
-    a. **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally.
-
-    b. **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server.
-
-    c. **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
+    * **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally.
+    * **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server.
+    * **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
 
     Choose the scanning technology that best suits your network environment and your endpoints' resources. Keep **Automatic** for predefined defaults or choose **Custom** to configure as needed. If you use Central Scan, make sure the virtual machines have connection to a Bitdefender Security Server to perform scanning tasks.
 
