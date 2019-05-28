@@ -145,7 +145,7 @@ To configure Bitdefender Linux agent installation:
 
 4. If needed, you can configure specific Linux targets to be excluded from installation by any of these criteria:
     * **Stemcell OS** - Bitdefender Linux agent will not install on the virtual machines running the specified operating systems.
-    * **Job names and releases** – Bitdefender Linux agent will not install on the virtual machines running the specified jobs.
+    * **Release name** – Bitdefender Linux agent will not install on the virtual machines running the specified jobs.
     * **Deployment name** – Bitdefender Linux agent will not install on the virtual machines having the specified deployment name.
     <p>The **Linux Agent Configuration** page includes the following default exclusions:</p>
         * Windows Server version 1803
@@ -158,6 +158,10 @@ To configure Bitdefender Linux agent installation:
     To configure installation targets or to exclude targets, click the <strong>Add</strong button corresponding to each criterion and complete the required fields, at the left side of the screen.<br />
     To remove an entry, click the trash can icon at the left side of the screen.<br />
     If you click the <strong>Add</strong> button, but you leave the new field empty, you will receive an error message when trying to save the settings.
+    </p>
+    <p class="note warning">
+    <strong>Warning: </strong>
+    At the moment, exclusions by <strong>Job Name</strong> do not function. This known issue will be addressed in a future release.
     </p>
 
 5. Click **Save**.
@@ -173,7 +177,7 @@ To configure Bitdefender Windows agent installation:
 
 3. Configure Windows installation targets by any of these criteria:
     * **Stemcell OS** - Bitdefender Windows agent will install on the virtual machines running the specified operating systems.
-    * **Job names and releases** - Bitdefender Windows agent will install on the virtual machines running the specified job names and releases.
+    * **Release name** - Bitdefender Windows agent will install on the virtual machines running the specified job names and releases.
     * **Deployment name** - Bitdefender Windows agent will install on the virtual machines having the specified deployment name.
 <p class="note important">
     <strong>Important: </strong>
@@ -194,6 +198,10 @@ To configure Bitdefender Windows agent installation:
     To configure installation targets or to exclude targets, click the <strong>Add</strong> button corresponding to each criterion and complete the required fields, at the left side of the screen.<br />
     To remove an entry, click the trash can icon at the left side of the screen.<br />
     If you click the <strong>Add</strong> button, but you leave the new field empty, you will receive an error message when trying to save the settings.
+    </p>
+    <p class="note warning">
+    <strong>Warning: </strong>
+    At the moment, exclusions by <strong>Job Name</strong> do not function. This known issue will be addressed in a future release.
     </p>
     
 5. Click **Save**.
