@@ -3,9 +3,15 @@ title: Bitdefender Endpoint Security Tools for PCF (Beta)
 owner: Partners
 ---
 
+<p class="note warning">
+<strong>WARNING! </strong>
+The Bitdefender Endpoint Security Tools for PCF tile is currently in beta and is intended for evaluation and test purposes only.
+Do not use this product in a PCF production environment.
+</p>
+
 <strong><%= modified_date %></strong>
 
-This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivotal® Cloud Foundry (PCF) tile.
+This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivotal Cloud Foundry (PCF) tile.
 
 <p class="note warning">
     <strong>WARNING! </strong>
@@ -15,13 +21,20 @@ This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivota
 
 ## <a id='overview'></a>Overview
 
-Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security agents to the virtual machines managed from your PCF deployment.
+Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security 
+agents to the VMs managed by your PCF deployment.
 
-For Pivotal Cloud Foundry customers wanting to fulfill the compliance mandate without slowing down infrastructure-service provisioning and application delivery, Bitdefender Endpoint Security Tools for PCF provides an automated way to incorporate award-winning endpoint security into BOSH-built virtual machine (VM) instances upon their creation. With VMs born secured, customers can achieve the following:
+For Pivotal Cloud Foundry customers wanting to fulfill the compliance mandate without 
+slowing down infrastructure-service provisioning and application delivery, 
+Bitdefender Endpoint Security Tools for PCF provides an automated way to incorporate 
+award-winning endpoint security into BOSH-built VM instances upon their creation. 
+With VMs born secured, customers can achieve the following:
 
-+ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender, a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® Outstanding Security Product Award winner.
++ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender, 
+a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® Outstanding Security Product Award winner.
 
-+ Streamline compliance with PCI DSS, HIPAA, Gramm-Leach-Bliley Act (GLBA), GDPR, and other regulatory standards calling for an antimalware solution.
++ Streamline compliance with PCI DSS, HIPAA, Gramm-Leach-Bliley Act (GLBA), GDPR,
+  and other regulatory standards calling for an antimalware solution.
 
 + Eliminate the time and effort required to manually deploy the agent and apply security policies after the fact.
 
@@ -32,9 +45,11 @@ For Pivotal Cloud Foundry customers wanting to fulfill the compliance mandate wi
 
 + Automatic deployment of Bitdefender Endpoint Security Tools by BOSH at the time of VM instantiation. 
 
-+ Single-console, single-pane-of-glass security management and consistent policy enforcement across heterogeneous datacenter and cloud infrastructure.
++ Single-console, single-pane-of-glass security management, and consistent policy enforcement
+  across heterogeneous datacenter and cloud infrastructure.
 
-+ Automatic application of security policies at scale and security-license recovery from decommissioned VMs in VMware® vSphere, AWS EC2 and Microsoft Azure environments.
++ Automatic application of security policies at scale and security-license recovery from decommissioned VMs
+  in VMware® vSphere, AWS EC2, and Microsoft Azure environments.
 
 + Compatibility with Splunk and other SIEM platforms (via Syslog) for security-event analysis. 
 
@@ -44,15 +59,18 @@ Layered next-generation endpoint security delivering, among others, the followin
 
 + Dynamic Machine Learning (Local and Cloud-Based)
 
-Leverages proprietary models trained in URL filtering and file analysis on 500M endpoint-sensors and trillions of samples to maximize efficacy and minimize false positives. 
+Leverages proprietary models trained in URL filtering and file analysis on 500M endpoint-sensors
+and trillions of samples to maximize efficacy and minimize false positives. 
 
 + HyperDetect Tunable Machine Learning
 
-Allows administrators to adjust threat-detection aggressiveness levels to suit the context and risk profile of their organization to detect high-probability, high-impact attacks while minimizing false positives on lower-risk threats.
+Allows administrators to adjust threat-detection aggressiveness levels to suit the context
+and risk profile of their organization to detect high-probability, high-impact attacks while minimizing false positives on lower-risk threats.
 
 + Process Inspector
 
-Continuously monitors and scores running processes and system events and tags suspicious activities to provide proactive, dynamic detection and remediation of unknown threats.
+Continuously monitors and scores running processes and system events and tags suspicious activities
+to provide proactive, dynamic detection, and remediation of unknown threats.
 
 + Anti-Exploit
 
@@ -60,7 +78,7 @@ Detects exploitation methods and protects the memory space of browsers, document
 
 + Sandbox Analyzer
 
-Automatically submits suspicious files from VMs to a cloud- or on-premises-based network sandbox for detonation and behavioral analysis.
+Automatically submits suspicious files from VMs to a cloud or on-premises-based network sandbox for detonation and behavioral analysis.
 
 + Application Control
 
@@ -68,7 +86,7 @@ Provides both whitelisting (“default deny”) and blacklisting capabilities to
 
 + Integrated Patch Management Add-On
 
-Provides automatic discovery and characterization of vulnerabilities and the widest range of patches for OSs, applications and golden images.
+Provides automatic discovery and characterization of vulnerabilities and the widest range of patches for OSs, applications, and golden images.
 
 
 ## <a id='snapshot'></a>Product Snapshot
@@ -114,9 +132,13 @@ The following table provides version and version-support information about Bitde
 
 Bitdefender Endpoint Security Tools for PCF requires your usage of a Bitdefender GravityZone product. 
 
-Please note that by downloading the Bitdefender Endpoint Security Tools for PCF you acknowledge and agree that the sole purpose of this product is to protect PCF deployments, which further implies you acquiring a Bitdefender GravityZone product, which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions. 
+By downloading the Bitdefender Endpoint Security Tools for PCF you acknowledge and agree
+that the sole purpose of this product is to protect PCF deployments,
+which further implies you acquiring a Bitdefender GravityZone product,
+which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions. 
 
-You can request a trial license [here](https://www.bitdefender.com/business/free-trials/) or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
+You can request a trial license [here](https://www.bitdefender.com/business/free-trials/)
+or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
 
 
 ## <a id='prereq'></a>Prerequisites
@@ -128,18 +150,26 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
 
 + A Bitdefender Endpoint Security Tools installation package configured in the GravityZone console for deployment in the PCF environment.
 
-+ To optimize network traffic, install Bitdefender Endpoint Security Tools with Relay role in your IaaS to have a local distribution mirror for installation files and updates. For more information, please refer to your GravityZone Administrator's Guide.
++ To optimize network traffic, install Bitdefender Endpoint Security Tools with Relay role
+  in your IaaS to have a local distribution mirror for installation files and updates.
+  For more information, see your GravityZone Administrator's Guide.
 
-+ To use Central Scan, you first must deploy a Security Server in your IaaS. Bitdefender Central Scan engine offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. For more information, please refer to your GravityZone Administrator's Guide.
++ To use Central Scan, you first must deploy a Security Server in your IaaS.
+  Bitdefender Central Scan engine offloads scanning to a Security Server,
+  a dedicated VM that deduplicates and centralizes most of the antimalware functionality
+  of antimalware agents, acting as a scan server.
+  For more information, see your GravityZone Administrator's Guide.
 
-+ To use on-access scanning on Linux, Fanotify kernel option must be enabled. For more information, please refer to [Fanotify man pages](http://man7.org/linux/man-pages/man7/fanotify.7.html).
++ To use on-access scanning on Linux, Fanotify kernel option must be enabled.
+  For more information, see [Fanotify man pages](http://man7.org/linux/man-pages/man7/fanotify.7.html).
 
-+ Make sure the protected virtual machines have connectivity to your GravityZone environment and Bitdefender Cloud services. To ensure Internet connectivity on protected virtual machines, you can use the `public_ip` VM extension.
-For details, refer to these knownledge base articles:
++ Make sure the protected VMs have connectivity to your GravityZone environment and Bitdefender Cloud services.
+  To ensure Internet connectivity on protected VMs, you can use the `public_ip` VM extension.
+  For details, see these knownledge base articles:
     - [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
     - [Connectivity requirements for Bitdefender GravityZone on-premises deployments](https://www.bitdefender.com/support/gravityzone-communication-ports-1132.html)
 
-+ Make sure the protected virtual machines meet the Bitdefender Endpoint Security Tools system requirements:
++ Make sure the protected VMs meet the Bitdefender Endpoint Security Tools system requirements:
 
     + CPU:
 
@@ -188,7 +218,9 @@ Actual RAM and disk usage after installation is lower.
 
 ## <a id='feedback'></a>Feedback
 
-If you have a feature request, questions, or information about a bug, please email [Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or contact [Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).
+If you have a feature request, questions, or information about a bug,
+please email [Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list
+or contact [Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).
 
 
 

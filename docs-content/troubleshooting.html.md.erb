@@ -16,13 +16,14 @@ PCF deployments fail after the installation of the Bitdefender Endpoint Security
 
 ###<a id='install.explanation'></a>Explanation
 
-This may happen because the Bitdefender Endpoint Security Tools installation on eligible virtual machines fails.
+This might happen because the Bitdefender Endpoint Security Tools installation on eligible VMs fails.
 
 ###<a id='install.solution'></a>Solution
 
-+ Make sure the virtual machine meets the system requirements.
++ Make sure the VM meets the system requirements.
 
-+ Check connectivity from the virtual machine to the deployer selected when configuring the GravityZone package (a Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). To troubleshoot this issue, refer to:
++ Check connectivity from the VM to the deployer selected when configuring the GravityZone package
+  (a Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). To troubleshoot this issue, see:
 
     – [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
 
@@ -35,11 +36,11 @@ For advanced troubleshooting, the Bitdefender support engineers require installa
 + The Windows agent delivers separate logs in the same location used by BOSH Director to collect them.
 Therefore, the logs collected by the BOSH Director for the failing VM deployments will also contain Bitdefender installation logs.
 
-##<a id='no-vm'></a>Virtual Machines Not Showing Up in GravityZone
+##<a id='no-vm'></a>VMs Not Showing Up in GravityZone
 
 ###<a id='no-vm.symptom'></a>Symptom
 
-The virtual machines from your PCF deployment are not showing up in GravityZone.
+The VMs from your PCF deployment are not showing up in GravityZone.
 
 ###<a id='no-vm.explanation'></a>Explanation
 
@@ -47,9 +48,10 @@ Bitdefender Endpoint Security Tools has not been successfully deployed in your P
 
 ###<a id='no-vm.solution'></a>Solution
 
-+ Make sure the virtual machine meets the system requirements.
++ Make sure the VM meets the system requirements.
 
-+ Check the connectivity from the virtual machine to the deployer selected when configuring the GravityZone package (a Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). To troubleshoot this issue, refer to:
++ Check the connectivity from the VM to the deployer selected when configuring the GravityZone package
+  (a Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). To troubleshoot this issue, see:
 
     – [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
 
@@ -59,7 +61,7 @@ Bitdefender Endpoint Security Tools has not been successfully deployed in your P
 
 ###<a id='antimalware.symptom'></a>Symptom
 
-The GravityZone console indicates issues with Antimalware module for PCF virtual machines, in the Network inventory.
+The GravityZone console indicates issues with Antimalware module for PCF VMs, in the Network inventory.
 
 ###<a id='antimalware.explanation'></a>Explanations
 
@@ -69,7 +71,7 @@ The GravityZone console indicates issues with Antimalware module for PCF virtual
 
 ###<a id='antimalware.solution'></a>Solution
 
-Check connectivity from the virtual machine to Bitdefender Cloud Servers or Bitdefender Security Server:
+Check connectivity from the VM to Bitdefender Cloud Servers or Bitdefender Security Server:
 
 + [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
 
@@ -80,15 +82,15 @@ Check connectivity from the virtual machine to Bitdefender Cloud Servers or Bitd
 
 ###<a id='updates.symptom'></a>Symptom
 
-The update tasks applied to the virtual machines fail.
+The update tasks applied to the VMs fail.
 
 ###<a id='updates.explanation'></a>Explanation
 
-There is no connectivity from the virtual machines to the assigned update servers (Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). 
+There is no connectivity from the VMs to the assigned update servers (Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). 
 
 ###<a id='updates.solution'></a>Solution
 
-Check the connectivity from the virtual machines to the assigned update servers:
+Check the connectivity from the VMs to the assigned update servers:
 
 * [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
 
