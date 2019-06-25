@@ -13,6 +13,11 @@ Do not use this product in a PCF production environment.
 
 This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivotal Cloud Foundry (PCF) tile.
 
+<p class="note warning">
+    <strong>WARNING! </strong>
+    The Bitdefender Endpoint Security Tools for PCF tile is currently in beta and is intended for evaluation and test purposes only. Do not use this product in a PCF production environment.
+</p>
+
 
 ## <a id='overview'></a>Overview
 
@@ -93,11 +98,11 @@ The following table provides version and version-support information about Bitde
     <th>Details</th>
     <tr>
         <td>Tile version</td>
-        <td>v1.0.29</td>
+        <td>v1.0.36</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>April 19, 2019</td>
+        <td>May 28, 2019</td>
     </tr>
     <tr>
         <td>Bitdefender agent version</td>
@@ -171,14 +176,44 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
         - Minimum: Intel® Pentium compatible processors, 2.4 GHz.
         - Recommended: Intel® Xeon multi-core CPU, 1.86 GHz or faster.
 
-    + Free RAM Memory: 1 GB
+    + Free RAM Memory at installation: 1024 MB
 
-    + Free Disk Space: 1 GB
+    + Free disk space required at installation (Antimalware only):
+<table class="nice">
+    <th>OS Platform</th>
+    <th>Central Scan</th>
+    <th>Hybrid Scan</th>
+    <th>Local Scan</th>
+    
+    <tr>
+	<td>Linux</td>
+        <td>300 MB</td>
+	<td>800 MB</td>
+	<td>1300 MB</td>
+    </tr>
+    <tr>
+	<td>Windows</td>
+        <td>350 MB</td>
+	<td>500 MB</td>
+	<td>1024 MB</td>
+    </tr> 
 
-    <p class="note important">
-    <strong>Note: </strong>
-    Actual RAM and disk usage after installation is lower.
-    </p>
+</table>
+
+<p class="note important">
+<strong>Note: </strong>
+The Linux agent currently installs on the system partition. It is recommended to install Bitdefender Endpoint Security Tools for PCF with Central Scan or Hybrid Scan.</strong></p>
+</p>
+
+<p class="note important">
+<strong>Note: </strong>
+Using fallback engines (such as Central Scan + Local Scan or Central Scan + Hybrid  Scan) or installing additional features requires more resources. For detailed information on system requirements, please check your GravityZone Installation Guide.
+</p>
+<p class="note important">
+<strong>Note: </strong>
+Actual RAM and disk usage after installation is lower.
+</p>
+
 
 
 ## <a id='feedback'></a>Feedback

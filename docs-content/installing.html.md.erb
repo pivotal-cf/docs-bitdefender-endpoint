@@ -43,9 +43,18 @@ Here are the best practices to create and configure an installation package in G
         and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server.
     * **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
 
-    Choose the scanning technology that best suits your network environment and your endpoints' resources.
-    Keep **Automatic** for predefined defaults or choose **Custom** to configure as needed.
-    If you use Central Scan, make sure the VMs have connection to a Bitdefender Security Server to perform scanning tasks.
+    a. **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally. **Local Scan** requires more local RAM and disk space resources.
+
+    b. **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. **Central Scan** requires the least local RAM and disk space resources.
+
+    c. **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
+
+    Choose the scanning technology that best suits your network environment and your endpoints' resources. Keep **Automatic** for predefined defaults or choose **Custom** to configure as needed. If you use **Central Scan**, make sure the virtual machines have connection to a Bitdefender Security Server to perform scanning tasks.
+    <p class="note important">
+    <strong>Note: </strong>
+    To optimize RAM and disk space requirements on virtual machines, use either **Central Scan** or **Hybrid Scan** mode.
+    </p>
+
 
 7. Under the **Settings** section:
     * Disable the **Scan before installation** checkbox to speed up deployment time.
@@ -123,9 +132,9 @@ displayed under the Settings tab:
 
 <p class="note important">
     <strong>Important: </strong>
-    Even if you use either Windows or Linux VMs in your PCF deployment or you want to install BEST on one platform only,
-    you must configure both forms with the download URL and at least one installation target must have a functional deployment.
-    In such cases, add a dummy installation target for the platform you do not use.
+
+    Make sure to configure both Windows and Linux forms with the download URL and appropriate installation target and/or exclusion rules. Pre-configured exclusions are in place for default stemcell operating systems, in order to avoid deploying the Linux agent on a Windows VM or the Windows agent on a Linux VM. Even if you do not plan to deploy on a specific platform (Windows or Linux), you must configure the download URL and add a dummy installation target for that platform.  
+
 </p>
 
 After you configure the tile, BOSH Director installs Bitdefender Endpoint Security Tools at the same time with other applications,
@@ -135,25 +144,31 @@ when deploying the Pivotal VMs.
 
 To configure Bitdefender Linux agent installation:
 
-1. Click the **Linux Configuration** option.
+1. Click the **Linux Agent Configuration** option.
 
 2. Under **Linux Downloader Package URL** section, enter the corresponding URL copied from the GravityZone console. 
     ![Linux Configuration](pivotal-ops-manager-linux-configuration.png)
 
 3. Configure the Linux installation targets by any of these criteria:
-    * **Stemcell OS** - Bitdefender Linux agent installs on the VMs running the specified operating systems.
-    * **Job names and releases** - Bitdefender Linux agent installs on the VMs running the specified job names and releases.
-    * **Deployment name** - Bitdefender Linux agent installs on the VMs having the specified deployment name.
-    <p class="note important">
+    * **Stemcell OS** - Bitdefender Linux agent will install on the virtual machines running the specified operating systems.
+    <p>The **Linux Agent Configuration** page includes the following default inclusions:</p>
+        * Ubuntu Trusty
+        * Ubuntu Xenial
+        * CentOS 7
+        <p class="note important">
     <strong>Important: </strong>
-    If you do not configure the Linux installation target, Bitdefender Endpoint Security Tools for PCF
-    attempts to install the Bitdefender Linux agent on all available VMs including Windows.
+    You are required to have at least one default installation target when configuring the Bitdefender Linux agent. Deleting all default installation targets may generate deployment issues. 
+
     </p>
+    * **Job name and release** - Bitdefender Linux agent will install on the virtual machines running the specified job names and releases.
+    * **Deployment name** - Bitdefender Linux agent will install on the virtual machines having the specified deployment name.
+    
+   
+
 
 4. If needed, you can configure specific Linux targets to be excluded from installation by any of these criteria:
-    * **Stemcell OS** - Bitdefender Linux agent does not install on the VMs running the specified operating systems.
-    * **Job names and releases** – Bitdefender Linux agent does not install on the VMs running the specified jobs.
-    * **Deployment name** – Bitdefender Linux agent does not install on the VMs having the specified deployment name.
+    
+
 
 5. Click **Save**.
 
@@ -161,28 +176,40 @@ To configure Bitdefender Linux agent installation:
 
 To configure Bitdefender Windows agent installation:
 
-1. Click the **Windows Configuration** option.
+1. Click the **Windows Agent Configuration** option.
 
 2. Under Windows Downloader Package URL section, enter the corresponding URL copied from GravityZone.
+    ![Linux Configuration](pivotal-ops-manager-windows-configuration.png)
 
 3. Configure Windows installation targets by any of these criteria:
-    * **Stemcell OS** - Bitdefender Windows agent installs on the VMs running the specified operating systems.
-    * **Job names and releases** - Bitdefender Windows agent installs on the VMs running the specified job names and releases.
-    * **Deployment name** - Bitdefender Windows agent installs on the VMs having the specified deployment name.
-<p class="note important">
+
+    * **Stemcell OS** - Bitdefender Windows agent will install on the virtual machines running the specified operating systems.
+    <p>The **Windows Agent Configuration** page includes the following default inclusions:</p>
+        * Windows Server 1803
+        * Windows 2012 R2
+        * Windows 2016
+        * Windows 2019
+    <p class="note important">  
     <strong>Important: </strong>
-    If you do not configure the Windows installation target, Bitdefender Endpoint Security Tools for PCF
-    attempts to install the Bitdefender Windows agent on all available VMs including Linux.
+   You are required to have at least one default installation target when configuring the Bitdefender Windows agent. Deleting all default installation targets may generate deployment issues.
+
 </p>
+    * **Release Name** - Bitdefender Windows agent will install on the virtual machines running the specified job names and releases.
+    * **Deployment Name** - Bitdefender Windows agent will install on the virtual machines having the specified deployment name.
+
+    
 
 4. If needed, you can configure specific Windows targets to be excluded from installation by any of these criteria:
-    * **Stemcell OS** - Bitdefender Windows agent does not install on the VMs running the specified operating systems.
-    * **Job names and releases** - Bitdefender Windows agent does not install on the VMs running the specified jobs.
-    * **Deployment name** - Bitdefender Windows agent does not install on the VMs having the specified deployment name.
 
+    * **Stemcell OS** - Bitdefender Windows agent will not install on the virtual machines running the specified operating systems.
+    * **Job name and release** - Bitdefender Windows agent will not install on the virtual machines running the specified jobs.
+    * **Deployment name** - Bitdefender Windows agent will not install on the virtual machines having the specified deployment name.
+   
+
+   
 5. Click **Save**.
 
-##<a id='deploy'></a>Deploy the Tile
+##<a id='deploy'></a>Deploy Tile
 
 After saving the Bitdefender Endpoint Security Tools for PCF tile configuration, you can deploy it:
 
@@ -191,6 +218,16 @@ After saving the Bitdefender Endpoint Security Tools for PCF tile configuration,
 2. In the screen containing the product list, select the checkbox corresponding to **Bitdefender Endpoint Security Tools**.
 
 3. Click **Apply changes**.
+
+<p class="note important">
+<strong>Important</strong>
+This will only update the runtime configuration, without affecting the existing virtual machines. You must redeploy them to install the Bitdefender agents. 
+</p>
+
+
+
+
+
 
 
 
