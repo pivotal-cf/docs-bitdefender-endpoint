@@ -21,20 +21,18 @@ This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivota
 
 ## <a id='overview'></a>Overview
 
-Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security 
+Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security
 agents to the VMs managed by your PCF deployment.
 
-For Pivotal Cloud Foundry customers wanting to fulfill the compliance mandate without 
-slowing down infrastructure-service provisioning and application delivery, 
-Bitdefender Endpoint Security Tools for PCF provides an automated way to incorporate 
-award-winning endpoint security into BOSH-built VM instances upon their creation. 
-With VMs born secured, customers can achieve the following:
+Bitdefender Endpoint Security Tools for PCF provides an automated way to incorporate
+award-winning endpoint security into BOSH-built VM instances upon their creation.
+With secured VMs, customers can achieve the following:
 
-+ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender, 
++ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender,
 a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® Outstanding Security Product Award winner.
 
 + Streamline compliance with PCI DSS, HIPAA, Gramm-Leach-Bliley Act (GLBA), GDPR,
-  and other regulatory standards calling for an antimalware solution.
+  and other regulatory standards calling for an anti-malware solution.
 
 + Eliminate the time and effort required to manually deploy the agent and apply security policies after the fact.
 
@@ -43,7 +41,7 @@ a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® 
 
 **Management**
 
-+ Automatic deployment of Bitdefender Endpoint Security Tools by BOSH at the time of VM instantiation. 
++ Automatic deployment of Bitdefender Endpoint Security Tools by BOSH at the time of VM instantiation.
 
 + Single-console, single-pane-of-glass security management, and consistent policy enforcement
   across heterogeneous datacenter and cloud infrastructure.
@@ -51,7 +49,7 @@ a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® 
 + Automatic application of security policies at scale and security-license recovery from decommissioned VMs
   in VMware® vSphere, AWS EC2, and Microsoft Azure environments.
 
-+ Compatibility with Splunk and other SIEM platforms (via Syslog) for security-event analysis. 
++ Compatibility with Splunk and other SIEM platforms (via Syslog) for security-event analysis.
 
 **Security**
 
@@ -60,7 +58,7 @@ Layered next-generation endpoint security delivering, among others, the followin
 + Dynamic Machine Learning (Local and Cloud-Based)
 
 Leverages proprietary models trained in URL filtering and file analysis on 500M endpoint-sensors
-and trillions of samples to maximize efficacy and minimize false positives. 
+and trillions of samples to maximize efficacy and minimize false positives.
 
 + HyperDetect Tunable Machine Learning
 
@@ -130,12 +128,12 @@ The following table provides version and version-support information about Bitde
 
 ## <a id='reqs'></a>Requirements
 
-Bitdefender Endpoint Security Tools for PCF requires your usage of a Bitdefender GravityZone product. 
+Bitdefender Endpoint Security Tools for PCF requires your usage of a Bitdefender GravityZone product.
 
 By downloading the Bitdefender Endpoint Security Tools for PCF you acknowledge and agree
 that the sole purpose of this product is to protect PCF deployments,
-which further implies you acquiring a Bitdefender GravityZone product,
-which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions. 
+which further implies you acquiring a Bitdefender GravityZone product. It
+ is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions.
 
 You can request a trial license [here](https://www.bitdefender.com/business/free-trials/)
 or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
@@ -150,14 +148,14 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
 
 + A Bitdefender Endpoint Security Tools installation package configured in the GravityZone console for deployment in the PCF environment.
 
-+ To optimize network traffic, install Bitdefender Endpoint Security Tools with Relay role
++ To optimize network traffic, install Bitdefender Endpoint Security Tools with the Relay role
   in your IaaS to have a local distribution mirror for installation files and updates.
   For more information, see your GravityZone Administrator's Guide.
 
 + To use Central Scan, you first must deploy a Security Server in your IaaS.
   Bitdefender Central Scan engine offloads scanning to a Security Server,
-  a dedicated VM that deduplicates and centralizes most of the antimalware functionality
-  of antimalware agents, acting as a scan server.
+  a dedicated VM that deduplicates and centralizes most of the anti-malware functionality
+  of anti-malware agents, acting as a scan server.
   For more information, see your GravityZone Administrator's Guide.
 
 + To use on-access scanning on Linux, Fanotify kernel option must be enabled.
@@ -184,7 +182,7 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
     <th>Central Scan</th>
     <th>Hybrid Scan</th>
     <th>Local Scan</th>
-    
+
     <tr>
 	<td>Linux</td>
         <td>300 MB</td>
@@ -196,7 +194,7 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
         <td>350 MB</td>
 	<td>500 MB</td>
 	<td>1024 MB</td>
-    </tr> 
+    </tr>
 
 </table>
 
@@ -218,15 +216,5 @@ Actual RAM and disk usage after installation is lower.
 
 ## <a id='feedback'></a>Feedback
 
-If you have a feature request, questions, or information about a bug,
-please email [Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list
-or contact [Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).
-
-
-
-
-
-
-
-
-
+If you have a feature request, questions, or information about a bug, contact
+[Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).
