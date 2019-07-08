@@ -25,11 +25,11 @@ Here are the best practices to create and configure an installation package in G
 
     ![Package Window](packages-add-window.png)
 
-4. Enter a suggestive name and description for the installation package you want to create. For example, **BEST for PCF**.
+4. Enter a suggested name and description for the installation package you want to create. For example, **BEST for PCF**.
 
 5. Select the protection modules you want to install:
     * For Linux deployments, only the Antimalware module is available.
-    * For Windows server deployments, you can install additional protection modules beside Antimalware, 
+    * For Windows server deployments, you can install additional protection modules beside Antimalware,
       including Advanced Threat Control, Application Control, and Patch Management (if available with your GravityZone license).
 
     <p class="note important">
@@ -40,12 +40,12 @@ Here are the best practices to create and configure an installation package in G
 6. Configure **Scan Mode**. Bitdefender Endpoint Security Tools provides three types of engines:
     * **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally.
     * **Central Scan** - offloads scanning to a Security Server, a dedicated VM that deduplicates
-        and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server.
+        and centralizes most of the anti-malware functionality of anti-malware agents, acting as a scan server.
     * **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
 
-    a. **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally. **Local Scan** requires more local RAM and disk space resources.
+    a. **Local Scan** - most of the scanning activity is performed locally, all signatures and engines are stored locally. **Local Scan** requires more local RAM and disk space resources.
 
-    b. **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. **Central Scan** requires the least local RAM and disk space resources.
+    b. **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the anti-malware functionality of anti-malware agents, acting as a scan server. **Central Scan** requires the least local RAM and disk space resources.
 
     c. **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
 
@@ -133,7 +133,7 @@ displayed under the Settings tab:
 <p class="note important">
     <strong>Important: </strong>
 
-    Make sure to configure both Windows and Linux forms with the download URL and appropriate installation target and/or exclusion rules. Pre-configured exclusions are in place for default stemcell operating systems, in order to avoid deploying the Linux agent on a Windows VM or the Windows agent on a Linux VM. Even if you do not plan to deploy on a specific platform (Windows or Linux), you must configure the download URL and add a dummy installation target for that platform.  
+    Make sure to configure both Windows and Linux forms with the download URL and appropriate installation target and/or exclusion rules. Pre-configured exclusions are in place for default stemcell operating systems, in order to avoid deploying the Linux agent on a Windows VM or the Windows agent on a Linux VM. Even if you do not plan to deploy on a specific platform (Windows or Linux), you must configure the download URL and add a dummy installation target for that platform.
 
 </p>
 
@@ -146,7 +146,7 @@ To configure Bitdefender Linux agent installation:
 
 1. Click the **Linux Agent Configuration** option.
 
-2. Under **Linux Downloader Package URL** section, enter the corresponding URL copied from the GravityZone console. 
+2. Under **Linux Downloader Package URL** section, enter the corresponding URL copied from the GravityZone console.
     ![Linux Configuration](pivotal-ops-manager-linux-configuration.png)
 
 3. Configure the Linux installation targets by any of these criteria:
@@ -157,17 +157,17 @@ To configure Bitdefender Linux agent installation:
         * CentOS 7
         <p class="note important">
     <strong>Important: </strong>
-    You are required to have at least one default installation target when configuring the Bitdefender Linux agent. Deleting all default installation targets may generate deployment issues. 
+    You are required to have at least one default installation target when configuring the Bitdefender Linux agent. Deleting all default installation targets may generate deployment issues.
 
     </p>
-    * **Job name and release** - Bitdefender Linux agent will install on the virtual machines running the specified job names and releases.
-    * **Deployment name** - Bitdefender Linux agent will install on the virtual machines having the specified deployment name.
-    
-   
+    * **Job name and release** - Bitdefender Linux Agent will install on the virtual machines running the specified job names and releases.
+    * **Deployment name** - Bitdefender Linux Agent will install on the virtual machines having the specified deployment name.
+
+
 
 
 4. If needed, you can configure specific Linux targets to be excluded from installation by any of these criteria:
-    
+
 
 
 5. Click **Save**.
@@ -189,7 +189,7 @@ To configure Bitdefender Windows agent installation:
         * Windows 2012 R2
         * Windows 2016
         * Windows 2019
-    <p class="note important">  
+    <p class="note important">
     <strong>Important: </strong>
    You are required to have at least one default installation target when configuring the Bitdefender Windows agent. Deleting all default installation targets may generate deployment issues.
 
@@ -197,16 +197,16 @@ To configure Bitdefender Windows agent installation:
     * **Release Name** - Bitdefender Windows agent will install on the virtual machines running the specified job names and releases.
     * **Deployment Name** - Bitdefender Windows agent will install on the virtual machines having the specified deployment name.
 
-    
+
 
 4. If needed, you can configure specific Windows targets to be excluded from installation by any of these criteria:
 
     * **Stemcell OS** - Bitdefender Windows agent will not install on the virtual machines running the specified operating systems.
     * **Job name and release** - Bitdefender Windows agent will not install on the virtual machines running the specified jobs.
     * **Deployment name** - Bitdefender Windows agent will not install on the virtual machines having the specified deployment name.
-   
 
-   
+
+
 5. Click **Save**.
 
 ##<a id='deploy'></a>Deploy Tile
@@ -221,13 +221,5 @@ After saving the Bitdefender Endpoint Security Tools for PCF tile configuration,
 
 <p class="note important">
 <strong>Important</strong>
-This will only update the runtime configuration, without affecting the existing virtual machines. You must redeploy them to install the Bitdefender agents. 
+This will only update the runtime configuration, without affecting the existing virtual machines. You must redeploy them to install the Bitdefender agents.
 </p>
-
-
-
-
-
-
-
-
