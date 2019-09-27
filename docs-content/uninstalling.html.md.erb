@@ -1,13 +1,13 @@
 ---
-title: Uninstalling Bitdefender Endpoint Security Tools for PCF
+title: Uninstalling Bitdefender Endpoint Security Tools for Pivotal Platform
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-This topic describes how to uninstall Bitdefender Endpoint Security Tools for PCF from your PCF deployment.
+This topic describes how to uninstall Bitdefender Endpoint Security Tools for Pivotal Platform from your Pivotal Platform deployment.
 
-1. From the Ops Manager Installation Dashboard, click the trash icon on Bitdefender Endpoint Security Tools for PCF tile. 
+1. From the Ops Manager Installation Dashboard, click the trash icon on Bitdefender Endpoint Security Tools for Pivotal Platform tile. 
 
 2. Click **Confirm** in the Delete Product window.
 
@@ -22,9 +22,9 @@ You must redeploy to remove the Bitdefender Endpoint Security Tools agents from 
 
 <p class="note warning">
     <strong>Warning: </strong>
-Do not run the <strong>Uninstall Client</strong> task from the GravityZone console on VMs from your PCF deployment.
+Do not run the <strong>Uninstall Client</strong> task from the GravityZone console on VMs from your Pivotal Platform deployment.
 
 If you try to uninstall the Linux agent from the GravityZone console, the target machines appear as failing,
-because the PCF monitor sees that the Bitdefender watchdog process is not running (because it no longer exists).
+because the Pivotal Platform monitor sees that the Bitdefender watchdog process is not running (because it no longer exists).
 </p>
 
