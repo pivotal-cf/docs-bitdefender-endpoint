@@ -1,19 +1,19 @@
 ---
-title: Installing and Configuring Bitdefender Endpoint Security Tools for Pivotal Platform
+title: Installing and Configuring Bitdefender Endpoint Security Tools for VMware Tanzu
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-This topic describes how to install and configure Bitdefender Endpoint Security Tools for Pivotal Platform.
+This topic describes how to install and configure Bitdefender Endpoint Security Tools for VMware Tanzu.
 
 
 ##<a id='package'></a>Configure Installation Package in GravityZone
 
-Bitdefender Endpoint Security Tools for Pivotal Platform tile downloads
+Bitdefender Endpoint Security Tools for VMware Tanzu tile downloads
 and installs a specific Bitdefender Endpoint Security Tools package configured in your GravityZone console.
 
-Here are the best practices to create and configure an installation package in GravityZone for use in a Pivotal Platform deployment:
+Here are the best practices to create and configure an installation package in GravityZone for use in a VMware Tanzu deployment:
 
 1. Connect and log in to GravityZone console using an administrator account.
 
@@ -25,7 +25,7 @@ Here are the best practices to create and configure an installation package in G
 
     ![Package Window](packages-add-window.png)
 
-4. Enter a suggestive name and description for the installation package you want to create. For example, **BEST for Pivotal Platform**.
+4. Enter a suggestive name and description for the installation package you want to create. For example, **BEST for VMware Tanzu**.
 
 5. Select the protection modules you want to install:
     * For Linux deployments, only the Antimalware module is available.
@@ -73,7 +73,7 @@ Here are the best practices to create and configure an installation package in G
     </p>
     <p class="note important">
     <strong>Important: </strong>
-    At this moment, Bitdefender Endpoint Security Tools for Pivotal Platform does not support connectivity via proxy.
+    At this moment, Bitdefender Endpoint Security Tools for VMware Tanzu does not support connectivity via proxy.
     For more information, contact <a href="https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory" target="_blank">Bitdefender Business Support</a>.
     </p>
 
@@ -90,14 +90,14 @@ The new package is displayed in the **Network > Packages** page.
 
 ##<a id='links'></a>Get Bitdefender Package Download Links
 
-To configure the Bitdefender Endpoint Security Tools for Pivotal Platform tile,
+To configure the Bitdefender Endpoint Security Tools for VMware Tanzu tile,
 you need the package download URLs for Windows and Linux agents,
 depending on the operating system running on Pivotal stemcells.
 
 To get the download links from the GravityZone console:
 
 1. In the **Network > Packages** page, select the checkbox corresponding to the package
-   you created for use in your Pivotal Platform environment.
+   you created for use in your VMware Tanzu environment.
 
 2. Click the **Send download links** icon in the action toolbar.
 
@@ -110,7 +110,7 @@ To get the download links from the GravityZone console:
 
 ##<a id='upload'></a>Upload Tile
 
-1. Download the Bitdefender Endpoint Security Tools for Pivotal Platform tile from [Pivotal Network](https://network.pivotal.io/).
+1. Download the Bitdefender Endpoint Security Tools for VMware Tanzu tile from [Pivotal Network](https://network.pivotal.io/).
 
 2. Navigate to the Ops Manager Installation Dashboard and click **Import a Product**.
 
@@ -123,7 +123,7 @@ To get the download links from the GravityZone console:
 
 ##<a id='configure'></a>Configure Tile
 
-The Bitdefender Endpoint Security Tools for Pivotal Platform tile from Ops Manager Installation Dashboard contains two forms,
+The Bitdefender Endpoint Security Tools for VMware Tanzu tile from Ops Manager Installation Dashboard contains two forms,
 displayed under the Settings tab:
 
 * One for configuring the installation of the Linux agent
@@ -204,7 +204,7 @@ To configure Bitdefender Windows agent installation:
 
 ##<a id='deploy'></a>Deploy Tile
 
-After saving the Bitdefender Endpoint Security Tools for Pivotal Platform tile configuration, you can deploy it:
+After saving the Bitdefender Endpoint Security Tools for VMware Tanzu tile configuration, you can deploy it:
 
 1. In the Ops Manager Installation Dashboard, click **Review Pending Changes**.
 

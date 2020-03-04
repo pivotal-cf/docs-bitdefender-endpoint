@@ -1,13 +1,13 @@
 ---
-title: Uninstalling Bitdefender Endpoint Security Tools for Pivotal Platform
+title: Uninstalling Bitdefender Endpoint Security Tools for VMware Tanzu
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-This topic describes how to uninstall Bitdefender Endpoint Security Tools for Pivotal Platform from your Pivotal Platform deployment.
+This topic describes how to uninstall Bitdefender Endpoint Security Tools for VMware Tanzu from your VMware Tanzu deployment.
 
-1. From the Ops Manager Installation Dashboard, click the trash icon on Bitdefender Endpoint Security Tools for Pivotal Platform tile. 
+1. From the Ops Manager Installation Dashboard, click the trash icon on Bitdefender Endpoint Security Tools for VMware Tanzu tile. 
 
 2. Click **Confirm** in the Delete Product window.
 
@@ -22,9 +22,9 @@ You must redeploy to remove the Bitdefender Endpoint Security Tools agents from 
 
 <p class="note warning">
     <strong>Warning: </strong>
-Do not run the <strong>Uninstall Client</strong> task from the GravityZone console on VMs from your Pivotal Platform deployment.
+Do not run the <strong>Uninstall Client</strong> task from the GravityZone console on VMs from your VMware Tanzu deployment.
 
 If you try to uninstall the Linux agent from the GravityZone console, the target machines appear as failing,
-because the Pivotal Platform monitor sees that the Bitdefender watchdog process is not running (because it no longer exists).
+because the VMware Tanzu monitor sees that the Bitdefender watchdog process is not running (because it no longer exists).
 </p>
 
