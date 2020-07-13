@@ -1,19 +1,19 @@
 ---
-title: Installing and Configuring Bitdefender Endpoint Security Tools for PCF
+title: Installing and Configuring Bitdefender Endpoint Security Tools for VMware Tanzu
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-This topic describes how to install and configure Bitdefender Endpoint Security Tools for PCF.
+This topic describes how to install and configure Bitdefender Endpoint Security Tools for VMware Tanzu.
 
 
 ##<a id='package'></a>Configure Installation Package in GravityZone
 
-Bitdefender Endpoint Security Tools for PCF tile downloads
+Bitdefender Endpoint Security Tools for VMware Tanzu tile downloads
 and installs a specific Bitdefender Endpoint Security Tools package configured in your GravityZone console.
 
-Here are the best practices to create and configure an installation package in GravityZone for use in a PCF deployment:
+Here are the best practices to create and configure an installation package in GravityZone for use in a VMware Tanzu deployment:
 
 1. Connect and log in to GravityZone console using an administrator account.
 
@@ -25,11 +25,11 @@ Here are the best practices to create and configure an installation package in G
 
     ![Package Window](packages-add-window.png)
 
-4. Enter a suggestive name and description for the installation package you want to create. For example, **BEST for PCF**.
+4. Enter a suggestive name and description for the installation package you want to create. For example, **BEST for VMware Tanzu**.
 
 5. Select the protection modules you want to install:
     * For Linux deployments, only the Antimalware module is available.
-    * For Windows server deployments, you can install additional protection modules beside Antimalware, 
+    * For Windows server deployments, you can install additional protection modules beside Antimalware,
       including Advanced Threat Control, Application Control, and Patch Management (if available with your GravityZone license).
 
     <p class="note important">
@@ -40,12 +40,12 @@ Here are the best practices to create and configure an installation package in G
 6. Configure **Scan Mode**. Bitdefender Endpoint Security Tools provides three types of engines:
     * **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally.
     * **Central Scan** - offloads scanning to a Security Server, a dedicated VM that deduplicates
-        and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server.
+        and centralizes most of the anti-malware functionality of anti-malware agents, acting as a scan server.
     * **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
 
-    a. **Local Scan** - most of the scanning activity is performed locally, all signatures and engines stored locally. **Local Scan** requires more local RAM and disk space resources.
+    a. **Local Scan** - most of the scanning activity is performed locally, all signatures and engines are stored locally. **Local Scan** requires more local RAM and disk space resources.
 
-    b. **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the antimalware functionality of antimalware agents, acting as a scan server. **Central Scan** requires the least local RAM and disk space resources.
+    b. **Central Scan** - offloads scanning to a Security Server, a dedicated virtual machine that deduplicates and centralizes most of the anti-malware functionality of anti-malware agents, acting as a scan server. **Central Scan** requires the least local RAM and disk space resources.
 
     c. **Hybrid Scan** – uses a combination of in-the-cloud scanning and a reduced set of local signatures.
 
@@ -73,7 +73,7 @@ Here are the best practices to create and configure an installation package in G
     </p>
     <p class="note important">
     <strong>Important: </strong>
-    At this moment, Bitdefender Endpoint Security Tools for PCF does not support connectivity via proxy.
+    At this moment, Bitdefender Endpoint Security Tools for VMware Tanzu does not support connectivity via proxy.
     For more information, contact <a href="https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory" target="_blank">Bitdefender Business Support</a>.
     </p>
 
@@ -90,14 +90,14 @@ The new package is displayed in the **Network > Packages** page.
 
 ##<a id='links'></a>Get Bitdefender Package Download Links
 
-To configure the Bitdefender Endpoint Security Tools for PCF tile,
+To configure the Bitdefender Endpoint Security Tools for VMware Tanzu tile,
 you need the package download URLs for Windows and Linux agents,
 depending on the operating system running on Pivotal stemcells.
 
 To get the download links from the GravityZone console:
 
 1. In the **Network > Packages** page, select the checkbox corresponding to the package
-   you created for use in your PCF environment.
+   you created for use in your VMware Tanzu environment.
 
 2. Click the **Send download links** icon in the action toolbar.
 
@@ -110,7 +110,7 @@ To get the download links from the GravityZone console:
 
 ##<a id='upload'></a>Upload Tile
 
-1. Download the Bitdefender Endpoint Security Tools for PCF tile from [Pivotal Network](https://network.pivotal.io/).
+1. Download the Bitdefender Endpoint Security Tools for VMware Tanzu tile from [Pivotal Network](https://network.pivotal.io/).
 
 2. Navigate to the Ops Manager Installation Dashboard and click **Import a Product**.
 
@@ -123,7 +123,7 @@ To get the download links from the GravityZone console:
 
 ##<a id='configure'></a>Configure Tile
 
-The Bitdefender Endpoint Security Tools for PCF tile from Ops Manager Installation Dashboard contains two forms,
+The Bitdefender Endpoint Security Tools for VMware Tanzu tile from Ops Manager Installation Dashboard contains two forms,
 displayed under the Settings tab:
 
 * One for configuring the installation of the Linux agent
@@ -133,7 +133,7 @@ displayed under the Settings tab:
 <p class="note important">
     <strong>Important: </strong>
 
-    Make sure to configure both Windows and Linux forms with the download URL and appropriate installation target and/or exclusion rules. Pre-configured exclusions are in place for default stemcell operating systems, in order to avoid deploying the Linux agent on a Windows VM or the Windows agent on a Linux VM. Even if you do not plan to deploy on a specific platform (Windows or Linux), you must configure the download URL and add a dummy installation target for that platform.  
+    Make sure to configure both Windows and Linux forms with the download URL and appropriate installation target and/or exclusion rules. Pre-configured exclusions are in place for default stemcell operating systems, in order to avoid deploying the Linux agent on a Windows VM or the Windows agent on a Linux VM. Even if you do not plan to deploy on a specific platform (Windows or Linux), you must configure the download URL and add a dummy installation target for that platform.
 
 </p>
 
@@ -146,31 +146,28 @@ To configure Bitdefender Linux agent installation:
 
 1. Click the **Linux Agent Configuration** option.
 
-2. Under **Linux Downloader Package URL** section, enter the corresponding URL copied from the GravityZone console. 
+2. Under **Linux Downloader Package URL** section, enter the corresponding URL copied from the GravityZone console.
     ![Linux Configuration](pivotal-ops-manager-linux-configuration.png)
 
 3. Configure the Linux installation targets by any of these criteria:
     * **Stemcell OS** - Bitdefender Linux agent will install on the virtual machines running the specified operating systems.
-    <p>The **Linux Agent Configuration** page includes the following default inclusions:</p>
+    * The **Linux Agent Configuration** page includes the following default inclusions:
         * Ubuntu Trusty
         * Ubuntu Xenial
         * CentOS 7
+
         <p class="note important">
-    <strong>Important: </strong>
-    You are required to have at least one default installation target when configuring the Bitdefender Linux agent. Deleting all default installation targets may generate deployment issues. 
+              <strong>Important: </strong>
+              You are required to have at least one default installation target when configuring the Bitdefender Linux agent. Deleting all default installation targets may generate deployment issues.
+        </p>
 
-    </p>
-    * **Job name and release** - Bitdefender Linux agent will install on the virtual machines running the specified job names and releases.
-    * **Deployment name** - Bitdefender Linux agent will install on the virtual machines having the specified deployment name.
-    
-   
-
+        * **Job name and release** - Bitdefender Linux Agent will install on the virtual machines running the specified job names and releases.
+        * **Deployment name** - Bitdefender Linux Agent will install on the virtual machines having the specified deployment name.
 
 4. If needed, you can configure specific Linux targets to be excluded from installation by any of these criteria:
-    
-
 
 5. Click **Save**.
+
 
 ###<a id='configure.windows'></a>Configure Bitdefender Endpoint Security Tools for Windows
 
@@ -182,36 +179,32 @@ To configure Bitdefender Windows agent installation:
     ![Linux Configuration](pivotal-ops-manager-windows-configuration.png)
 
 3. Configure Windows installation targets by any of these criteria:
-
+<br> <br>
     * **Stemcell OS** - Bitdefender Windows agent will install on the virtual machines running the specified operating systems.
-    <p>The **Windows Agent Configuration** page includes the following default inclusions:</p>
+    * The **Windows Agent Configuration** page includes the following default inclusions:
         * Windows Server 1803
         * Windows 2012 R2
         * Windows 2016
         * Windows 2019
-    <p class="note important">  
-    <strong>Important: </strong>
-   You are required to have at least one default installation target when configuring the Bitdefender Windows agent. Deleting all default installation targets may generate deployment issues.
 
-</p>
+        <p class="note important">
+        <strong>Important: </strong>
+        You are required to have at least one default installation target when configuring the Bitdefender Linux agent. Deleting all default installation targets may generate deployment issues.
+        </p>
     * **Release Name** - Bitdefender Windows agent will install on the virtual machines running the specified job names and releases.
     * **Deployment Name** - Bitdefender Windows agent will install on the virtual machines having the specified deployment name.
 
-    
-
 4. If needed, you can configure specific Windows targets to be excluded from installation by any of these criteria:
-
     * **Stemcell OS** - Bitdefender Windows agent will not install on the virtual machines running the specified operating systems.
     * **Job name and release** - Bitdefender Windows agent will not install on the virtual machines running the specified jobs.
     * **Deployment name** - Bitdefender Windows agent will not install on the virtual machines having the specified deployment name.
-   
 
-   
 5. Click **Save**.
+
 
 ##<a id='deploy'></a>Deploy Tile
 
-After saving the Bitdefender Endpoint Security Tools for PCF tile configuration, you can deploy it:
+After saving the Bitdefender Endpoint Security Tools for VMware Tanzu tile configuration, you can deploy it:
 
 1. In the Ops Manager Installation Dashboard, click **Review Pending Changes**.
 
@@ -221,13 +214,5 @@ After saving the Bitdefender Endpoint Security Tools for PCF tile configuration,
 
 <p class="note important">
 <strong>Important</strong>
-This will only update the runtime configuration, without affecting the existing virtual machines. You must redeploy them to install the Bitdefender agents. 
+This will only update the runtime configuration, without affecting the existing virtual machines. You must redeploy them to install the Bitdefender agents.
 </p>
-
-
-
-
-
-
-
-

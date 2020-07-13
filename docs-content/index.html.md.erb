@@ -1,40 +1,32 @@
 ---
-title: Bitdefender Endpoint Security Tools for PCF (Beta)
+title: Bitdefender Endpoint Security Tools for VMware Tanzu (Beta)
 owner: Partners
 ---
 
 <p class="note warning">
 <strong>WARNING! </strong>
-The Bitdefender Endpoint Security Tools for PCF tile is currently in beta and is intended for evaluation and test purposes only.
-Do not use this product in a PCF production environment.
+The Bitdefender Endpoint Security Tools for VMware Tanzu tile is currently in beta and is intended for evaluation and test purposes only.
+Do not use this product in a VMware Tanzu production environment.
 </p>
 
 <strong><%= modified_date %></strong>
 
-This topic describes the Bitdefender® Endpoint Security Tools (BEST) for Pivotal Cloud Foundry (PCF) tile.
-
-<p class="note warning">
-    <strong>WARNING! </strong>
-    The Bitdefender Endpoint Security Tools for PCF tile is currently in beta and is intended for evaluation and test purposes only. Do not use this product in a PCF production environment.
-</p>
-
+This topic describes the Bitdefender® Endpoint Security Tools (BEST) for VMware Tanzu tile.
 
 ## <a id='overview'></a>Overview
 
-Bitdefender Endpoint Security Tools for PCF allows you to easily deploy Bitdefender GravityZone security 
-agents to the VMs managed by your PCF deployment.
+Bitdefender Endpoint Security Tools for VMware Tanzu allows you to easily deploy Bitdefender GravityZone security
+agents to the VMs managed by your VMware Tanzu deployment.
 
-For Pivotal Cloud Foundry customers wanting to fulfill the compliance mandate without 
-slowing down infrastructure-service provisioning and application delivery, 
-Bitdefender Endpoint Security Tools for PCF provides an automated way to incorporate 
-award-winning endpoint security into BOSH-built VM instances upon their creation. 
-With VMs born secured, customers can achieve the following:
+Bitdefender Endpoint Security Tools for VMware Tanzu provides an automated way to incorporate
+award-winning endpoint security into BOSH-built VM instances upon their creation.
+With secured VMs, customers can achieve the following:
 
-+ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender, 
++ Protect datacenter and cloud VMs from advanced cyberattacks with layered next-generation security from Bitdefender,
 a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® Outstanding Security Product Award winner.
 
 + Streamline compliance with PCI DSS, HIPAA, Gramm-Leach-Bliley Act (GLBA), GDPR,
-  and other regulatory standards calling for an antimalware solution.
+  and other regulatory standards calling for an anti-malware solution.
 
 + Eliminate the time and effort required to manually deploy the agent and apply security policies after the fact.
 
@@ -43,7 +35,7 @@ a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® 
 
 **Management**
 
-+ Automatic deployment of Bitdefender Endpoint Security Tools by BOSH at the time of VM instantiation. 
++ Automatic deployment of Bitdefender Endpoint Security Tools by BOSH at the time of VM instantiation.
 
 + Single-console, single-pane-of-glass security management, and consistent policy enforcement
   across heterogeneous datacenter and cloud infrastructure.
@@ -51,7 +43,7 @@ a Forrester® Wave Leader in Endpoint Security Suites and the AV Comparatives® 
 + Automatic application of security policies at scale and security-license recovery from decommissioned VMs
   in VMware® vSphere, AWS EC2, and Microsoft Azure environments.
 
-+ Compatibility with Splunk and other SIEM platforms (via Syslog) for security-event analysis. 
++ Compatibility with Splunk and other SIEM platforms (via Syslog) for security-event analysis.
 
 **Security**
 
@@ -60,7 +52,7 @@ Layered next-generation endpoint security delivering, among others, the followin
 + Dynamic Machine Learning (Local and Cloud-Based)
 
 Leverages proprietary models trained in URL filtering and file analysis on 500M endpoint-sensors
-and trillions of samples to maximize efficacy and minimize false positives. 
+and trillions of samples to maximize efficacy and minimize false positives.
 
 + HyperDetect Tunable Machine Learning
 
@@ -82,7 +74,7 @@ Automatically submits suspicious files from VMs to a cloud or on-premises-based 
 
 + Application Control
 
-Provides both whitelisting (“default deny”) and blacklisting capabilities to restrict the range of applications allowed to run in a VM.
+Provides both Allowlisting (“default deny”) and Denylisting capabilities to restrict the range of applications allowed to run in a VM.
 
 + Integrated Patch Management Add-On
 
@@ -91,18 +83,18 @@ Provides automatic discovery and characterization of vulnerabilities and the wid
 
 ## <a id='snapshot'></a>Product Snapshot
 
-The following table provides version and version-support information about Bitdefender Endpoint Security Tools for Pivotal Cloud Foundry (PCF).
+The following table provides version and version-support information about Bitdefender Endpoint Security Tools for VMware Tanzu.
 
 <table class="nice">
     <th>Element</th>
     <th>Details</th>
     <tr>
         <td>Tile version</td>
-        <td>v1.0.36</td>
+        <td>v1.0.38</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>May 28, 2019</td>
+        <td>July 10, 2019</td>
     </tr>
     <tr>
         <td>Bitdefender agent version</td>
@@ -110,8 +102,11 @@ The following table provides version and version-support information about Bitde
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>v2.3.x, v2.4.x, and v2.5.x</td>
-
+        <td>v2.3.x, v2.4.x, v2.5.x, and v2.6.x</td>
+    </tr>
+    <tr>
+        <td>Compatible Tanzu Application Service version(s)</td>
+        <td>v2.3.x, v2.4.x, v2.5.x, and v2.6.x</td>
     </tr>
     <tr>
        <td>BOSH stemcell version</td>
@@ -130,12 +125,12 @@ The following table provides version and version-support information about Bitde
 
 ## <a id='reqs'></a>Requirements
 
-Bitdefender Endpoint Security Tools for PCF requires your usage of a Bitdefender GravityZone product. 
+Bitdefender Endpoint Security Tools for VMware Tanzu requires your usage of a Bitdefender GravityZone product.
 
-By downloading the Bitdefender Endpoint Security Tools for PCF you acknowledge and agree
-that the sole purpose of this product is to protect PCF deployments,
-which further implies you acquiring a Bitdefender GravityZone product,
-which is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions. 
+By downloading the Bitdefender Endpoint Security Tools for VMware Tanzu you acknowledge and agree
+that the sole purpose of this product is to protect VMware Tanzu deployments,
+which further implies you acquiring a Bitdefender GravityZone product. It
+ is available as a 30 days free trial. After trial period expires you are subjected to licensing terms and conditions.
 
 You can request a trial license [here](https://www.bitdefender.com/business/free-trials/)
 or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.com).
@@ -144,20 +139,20 @@ or by emailing [Bitdefender Enterprise Sales](mailto:enterprisesale@bitdefender.
 ## <a id='prereq'></a>Prerequisites
 
 
-Bitdefender Endpoint Security Tools for PCF has the following requirements and prerequisites:
+Bitdefender Endpoint Security Tools for VMware Tanzu has the following requirements and prerequisites:
 
-+ A PCF operator with administrative rights.
++ A VMware Tanzu operator with administrative rights.
 
-+ A Bitdefender Endpoint Security Tools installation package configured in the GravityZone console for deployment in the PCF environment.
++ A Bitdefender Endpoint Security Tools installation package configured in the GravityZone console for deployment in the VMware Tanzu environment.
 
-+ To optimize network traffic, install Bitdefender Endpoint Security Tools with Relay role
++ To optimize network traffic, install Bitdefender Endpoint Security Tools with the Relay role
   in your IaaS to have a local distribution mirror for installation files and updates.
   For more information, see your GravityZone Administrator's Guide.
 
 + To use Central Scan, you first must deploy a Security Server in your IaaS.
   Bitdefender Central Scan engine offloads scanning to a Security Server,
-  a dedicated VM that deduplicates and centralizes most of the antimalware functionality
-  of antimalware agents, acting as a scan server.
+  a dedicated VM that deduplicates and centralizes most of the anti-malware functionality
+  of anti-malware agents, acting as a scan server.
   For more information, see your GravityZone Administrator's Guide.
 
 + To use on-access scanning on Linux, Fanotify kernel option must be enabled.
@@ -184,7 +179,7 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
     <th>Central Scan</th>
     <th>Hybrid Scan</th>
     <th>Local Scan</th>
-    
+
     <tr>
 	<td>Linux</td>
         <td>300 MB</td>
@@ -196,13 +191,13 @@ Bitdefender Endpoint Security Tools for PCF has the following requirements and p
         <td>350 MB</td>
 	<td>500 MB</td>
 	<td>1024 MB</td>
-    </tr> 
+    </tr>
 
 </table>
 
 <p class="note important">
 <strong>Note: </strong>
-The Linux agent currently installs on the system partition. It is recommended to install Bitdefender Endpoint Security Tools for PCF with Central Scan or Hybrid Scan.</strong></p>
+The Linux agent currently installs on the system partition. It is recommended to install Bitdefender Endpoint Security Tools for VMware Tanzu with Central Scan or Hybrid Scan.</strong></p>
 </p>
 
 <p class="note important">
@@ -218,15 +213,5 @@ Actual RAM and disk usage after installation is lower.
 
 ## <a id='feedback'></a>Feedback
 
-If you have a feature request, questions, or information about a bug,
-please email [Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list
-or contact [Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).
-
-
-
-
-
-
-
-
-
+If you have a feature request, questions, or information about a bug, contact
+[Bitdefender Business Support](https://www.bitdefender.com/support/contact-us.html?last_page=BusinessCategory).

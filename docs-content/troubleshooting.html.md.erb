@@ -1,18 +1,18 @@
 ---
-title: Troubleshooting Bitdefender Endpoint Security Tools for PCF
+title: Troubleshooting Bitdefender Endpoint Security Tools for VMware Tanzu
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-This topic provides instructions for troubleshooting Bitdefender Endpoint Security Tools for PCF.
+This topic provides instructions for troubleshooting Bitdefender Endpoint Security Tools for VMware Tanzu.
 
 
 ##<a id='install'></a>Failed Installations
 
 ###<a id='install.symptom'></a>Symptom
 
-PCF deployments fail after the installation of the Bitdefender Endpoint Security Tools for PCF tile. 
+VMware Tanzu deployments fail after the installation of the Bitdefender Endpoint Security Tools for VMware Tanzu tile.
 
 ###<a id='install.explanation'></a>Explanation
 
@@ -40,11 +40,11 @@ Therefore, the logs collected by the BOSH Director for the failing VM deployment
 
 ###<a id='no-vm.symptom'></a>Symptom
 
-The VMs from your PCF deployment are not showing up in GravityZone.
+The VMs from your VMware Tanzu deployment are not showing up in GravityZone.
 
 ###<a id='no-vm.explanation'></a>Explanation
 
-Bitdefender Endpoint Security Tools has not been successfully deployed in your PCF deployment.
+Bitdefender Endpoint Security Tools has not been successfully deployed in your VMware Tanzu deployment.
 
 ###<a id='no-vm.solution'></a>Solution
 
@@ -61,7 +61,7 @@ Bitdefender Endpoint Security Tools has not been successfully deployed in your P
 
 ###<a id='antimalware.symptom'></a>Symptom
 
-The GravityZone console indicates issues with Antimalware module for PCF VMs, in the Network inventory.
+The GravityZone console indicates issues with Antimalware module for VMware Tanzu VMs, in the Network inventory.
 
 ###<a id='antimalware.explanation'></a>Explanations
 
@@ -86,7 +86,7 @@ The update tasks applied to the VMs fail.
 
 ###<a id='updates.explanation'></a>Explanation
 
-There is no connectivity from the VMs to the assigned update servers (Relay, Bitdefender Cloud servers or GravityZone on-premises appliance). 
+There is no connectivity from the VMs to the assigned update servers (Relay, Bitdefender Cloud servers or GravityZone on-premises appliance).
 
 ###<a id='updates.solution'></a>Solution
 
@@ -95,5 +95,3 @@ Check the connectivity from the VMs to the assigned update servers:
 * [Connectivity requirements for Bitdefender GravityZone Cloud](https://www.bitdefender.com/support/bitdefender-gravityzone-(cloud-console)-communication-ports-1256.html)
 
 * [Connectivity requirements for Bitdefender GravityZone on-premises deployments](https://www.bitdefender.com/support/gravityzone-communication-ports-1132.html)
-
-
